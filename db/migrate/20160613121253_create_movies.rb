@@ -1,7 +1,6 @@
-class CreateModels < ActiveRecord::Migration
+class CreateMovies < ActiveRecord::Migration
   def change
-    create_table :models do |t|
-      t.string :Movie
+    create_table :movies do |t|
       t.string :title
       t.text :description
       t.string :movie_length
