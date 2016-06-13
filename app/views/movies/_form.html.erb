@@ -2,7 +2,6 @@
   <% if @movie.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
-
       <ul>
       <% @movie.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -34,4 +33,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= link_to 'signout', destroy_user_session_path, method: :delete%>
 <% end %>
