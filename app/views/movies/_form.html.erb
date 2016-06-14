@@ -10,29 +10,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :movie_length %><br>
     <%= f.text_field :movie_length %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :director %><br>
     <%= f.text_field :director %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :rating %><br>
     <%= f.text_field :rating %>
   </div>
-  <div class="actions">
+  <div class="form-group">
     <%= f.submit %>
   </div>
-  <%= link_to 'signout', destroy_user_session_path, method: :delete%>
-  <%= link_to 'edit user', edit_user_registration_path%>
 <% end %>
