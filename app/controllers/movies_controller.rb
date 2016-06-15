@@ -35,7 +35,7 @@ class MoviesController < ApplicationController
     @movie = current_user.movies.build(movie_params)
     respond_to do |format|
       if @movie.save
-        format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
+        format.html { redirect_to movie_path(@movie), notice: 'Movie was successfully created.' }
       else
         format.html { render :new }
       end
@@ -45,7 +45,7 @@ class MoviesController < ApplicationController
   def update
     respond_to do |format|
       if @movie.update(movie_params)
-        format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
+        format.html { redirect_to movie_path(@movie), notice: 'Movie was successfully updated.' }
       else
         format.html { render :edit }
       end
